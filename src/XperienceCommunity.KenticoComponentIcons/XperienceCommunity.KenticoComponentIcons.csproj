@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Product>Xperience Community: Kentico Component Icons</Product>
+        <Title>$(Product)</Title>
+        <Description>...</Description>
+    </PropertyGroup>
+</Project>

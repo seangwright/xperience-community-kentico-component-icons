@@ -1,0 +1,42 @@
+name: "Pack and Publish"
+
+description: "Packs and publishes .NET Libraries as build artifacts"
+
+inputs:
+  projectPaths:
+    description: "Comma-separated list of paths to project files"
+    required: true
+  preReleaseVersion:
+    description: "The pre-release version to use for the NuGet package"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Create PreRelease Artifacts
+      run: |
+        $projectPaths = "${{ inputs.projectPaths }}".Split(',').Trim()
+        foreach ($projectPath in $projectPaths) {
+          dotnet pack $projectPath -c Release --no-build --include-symbols -o ./artifacts/prerelease --version-suffix prerelease-${{ inputs.preReleaseVersion }}
+        }
+      shell: pwsh
+
+    - name: "Save prerelease artifacts"
+      uses: actions/upload-artifact@v6
+      with:
+        name: prerelease
+        path: ./artifacts/prerelease/*
+
+    - name: Create Release Artifacts
+      run: |
+        $projectPaths = "${{ inputs.projectPaths }}".Split(',').Trim()
+        foreach ($projectPath in $projectPaths) {
+          dotnet pack $projectPath -c Release --no-build --include-symbols -o ./artifacts/release
+        }
+      shell: pwsh
+
+    - name: "Save release artifacts"
+      uses: actions/upload-artifact@v6
+      with:
+        name: release
+        path: ./artifacts/release/*

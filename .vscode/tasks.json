@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": ".NET: build (Solution)",
+      "type": "shell",
+      "command": "dotnet build",
+      "problemMatcher": "$msCompile",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "format",
+        "XperienceCommunity.KenticoComponentIcons.slnx",
+        "--exclude",
+        "./examples/**"
+      ],
+      "problemMatcher": ["$msCompile"],
+      "group": "none",
+      "label": "dotnet: format"
+    },
+    {
+      "type": "dotnet",
+      "task": "clean",
+      "problemMatcher": ["$msCompile"],
+      "group": "build",
+      "label": "dotnet: clean"
+    }
+  ]
+}
