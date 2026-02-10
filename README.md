@@ -6,9 +6,9 @@
 
 [![NuGet Package](https://img.shields.io/nuget/v/XperienceCommunity.KenticoComponentIcons.svg)](https://www.nuget.org/packages/XperienceCommunity.KenticoComponentIcons)
 
-[![NuGet Package](https://img.shields.io/nuget/v/XperienceCommunity.KenticoComponentIcons.Admin.svg)](https://www.nuget.org/packages/XperienceCommunity.KenticoComponentIcons.Admin)
-
 ## Description
+
+A pre-packaged, annotated list of all icons used in Xperience by Kentico Page, Email, and Form Builder components. Great for AI agents building Xperience components!
 
 ## Requirements
 

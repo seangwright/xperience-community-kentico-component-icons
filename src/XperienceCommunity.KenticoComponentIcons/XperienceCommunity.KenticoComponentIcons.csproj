@@ -2,6 +2,6 @@
     <PropertyGroup>
         <Product>Xperience Community: Kentico Component Icons</Product>
         <Title>$(Product)</Title>
-        <Description>...</Description>
+        <Description>A pre-packaged, annotated list of all icons used in Xperience by Kentico Page, Email, and Form Builder components. Great for AI agents building Xperience components!</Description>
     </PropertyGroup>
 </Project>
