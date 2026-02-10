@@ -20,7 +20,7 @@ A pre-packaged, annotated list of all icons used in Xperience by Kentico Page, E
 
 ### Dependencies
 
-- [ASP.NET Core 10.0](https://dotnet.microsoft.com/en-us/download)
+- [.NET 10.0](https://dotnet.microsoft.com/en-us/download)
 - [Xperience by Kentico](https://docs.kentico.com) or [Kentico Xperience 13](https://docs.kentico.com/13)
 
 ## Package Installation
