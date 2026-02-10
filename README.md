@@ -10,6 +10,35 @@
 
 A pre-packaged, annotated list of all icons used in Xperience by Kentico Page, Email, and Form Builder components. Great for AI agents building Xperience components!
 
+The icon list is a C# class with doc comments on every icon that clearly describe what the icon looks like. This helps AI agents (and human developers) understand what the icon "looks like".
+
+```csharp
+public static class KenticoIcons
+{
+    /// <summary>
+    /// Lowercase letter "a" in a simple font.
+    /// </summary>
+    public const string A_LOWERCASE = "icon-a-lowercase";
+    /// <summary>
+    /// Three horizontal lines with a bordered rectangle above.
+    /// </summary>
+    public const string ACCORDION = "icon-accordion";
+    /// <summary>
+    /// Puzzle piece with a plus sign circle badge.
+    /// </summary>
+    public const string ADD_MODULE = "icon-add-module";
+    /// <summary>
+    /// Simplified robot figure with antennae and rounded limbs.
+    /// </summary>
+    public const string ANDROID = "icon-android";
+    /// <summary>
+    /// Stylized apple with a leaf and a bite taken out
+    /// </summary>
+    public const string APPLE = "icon-apple";
+    // ...
+}
+```
+
 ## Requirements
 
 ### Library Version Matrix
